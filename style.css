@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Do Hyeon", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -76,7 +76,6 @@ header p {
   color: #2980b9;
 }
 
-/* 비교 분석 섹션 스타일 (추가) */
 .compare-card h3 {
   margin-bottom: 12px;
   color: #2c3e50;
