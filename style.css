@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #7f8c8d;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.summary-card h3 {
+  color: #7f8c8d;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.summary-card.income p {
+  color: #27ae60;
+}
+.summary-card.expense p {
+  color: #c0392b;
+}
+.summary-card.balance p {
+  color: #2980b9;
+}
+
+/* 비교 분석 섹션 스타일 (추가) */
+.compare-card h3 {
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.compare-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.comparison-text {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  margin-top: 5px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 100px 130px 110px 1fr 1fr 80px;
+  gap: 10px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#transactionList {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#transactionList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info span {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.warning-text {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.alert-red {
+  color: #c0392b;
+}
+.alert-green {
+  color: #27ae60;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .summary-section {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .compare-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
