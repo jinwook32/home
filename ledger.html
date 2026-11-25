@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대학생 간편 가계부 (중간발표 버전)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="black-han-sans-regular">대학생 간편 가계부</h1>
+        <p>언제 어디서나 가볍게 쓰는 자산 관리 웹</p>
+      </header>
 
+      <!-- 잔액 요약 섹션 (조건문 적용 대상) -->
+      <section class="summary-section">
+        <div class="summary-card income">
+          <h3>총 수입</h3>
+          <p id="totalIncome">0원</p>
+        </div>
+        <div class="summary-card expense">
+          <h3>총 지출</h3>
+          <p id="totalExpense">0원</p>
+        </div>
+        <div class="summary-card balance" id="balanceCard">
+          <h3>남은 잔액</h3>
+          <p id="totalBalance">0원</p>
+          <div id="balanceWarning" class="warning-text"></div>
+        </div>
+      </section>
+
+      <!-- 대학생 평균 소비 비교 분석 섹션 (추가됨) -->
+      <section class="card compare-card">
+        <h3>대학생 월평균 소비 비교 분석</h3>
+        <div class="compare-info">
+          <p>
+            한국 대학생 월평균 지출: <strong>681,000원</strong>
+            <span class="sub-text">(등록금·주거비 제외)</span>
+          </p>
+          <p>나의 총 지출금액: <span id="myTotalExpense">0원</span></p>
+        </div>
+        <div id="comparisonResult" class="comparison-text"></div>
+      </section>
+
+      <!-- 입력 폼 섹션 -->
+      <section class="card">
+        <h3>내역 입력</h3>
+        <form id="transactionForm">
+          <div class="form-row">
+            <select id="type">
+              <option value="expense">지출</option>
+              <option value="income">수입</option>
+            </select>
+            <input type="date" id="date" required />
+            <select id="category">
+              <option value="식비">식비</option>
+              <option value="교통">교통</option>
+              <option value="문화">문화</option>
+              <option value="쇼핑">쇼핑</option>
+              <option value="기타">기타</option>
+            </select>
+            <input type="number" id="amount" placeholder="금액 (원)" required />
+            <input type="text" id="memo" placeholder="메모" />
+            <button type="submit" class="submit-btn">추가</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 상세 내역 리스트 -->
+      <section class="card">
+        <h3>상세 거래 내역</h3>
+        <ul id="transactionList">
+          <!-- 자바스크립트로 동적 생성 -->
+        </ul>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
